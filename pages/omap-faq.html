@@ -4,17 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <title>HuBMAP: CCF Portal</title>
-    <meta name="keywords" content="kaggle, common coordinate framework, ccf, ontology, hubmap" />
+    <meta name="keywords" content="common coordinate framework, ccf, ontology, hubmap, " />
     <meta name="robots" content="index, follow" />
     <meta name="title" content="CCF Portal">
     <meta name="description"
-        content="Information on the Kaggle competition hosted by by MC-IU at Indiana University, Bloomington, for the Human Biomolecular Atlas Project (HuBMAP).">
+        content="Detailed information on the common coordinate framework and ontology work performed by MC-IU at Indiana University, Bloomington, on the Human Biomolecular Atlas Project (HuBMAP).">
     <meta name="author" content="MC-IU Team">
     <meta name="Copyright" content="Copyright MC-IU 2021. All Rights Reserved.">
 
     <meta name="google-site-verification" content="">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="refresh" content="1; url='https://humanatlas.io/faq/omap'" />
 
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
@@ -24,9 +26,19 @@
     <link href="../css/bootstrap-material-design.css" media="screen" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap" rel="stylesheet">
     <link href="../css/cns.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/vanillawc/wc-markdown@1/index.js" type="module"></script>
 </head>
 
 <body>
+    <div aria-live="polite" aria-atomic="true" style="position: fixed; left: 16px; bottom: 0; z-index: 10000;">
+        <div class="alert alert-lightish alert-dismissible fade show" role="alert">
+            The new Human Reference Atlas Portal is here! &#127881;<br>
+            View this page at <a href="https://humanatlas.io/faq/omap">HRA Portal: OMAP FAQ</a>.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
     <header class="navbar flex-column flex-md-row bd-navbar">
         <div class="container">
             <a class="navbar-brand mr-0 mr-md-2" aria-label="CCF Portal">
@@ -41,16 +53,20 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                     <a class="dropdown-item" href="../index.html">Home</a>
                     <a class="dropdown-item" href="ccf-anatomical-structures.html">CCF Anatomical Structures, Cell Types
-                        and Biomarkers (ASCT+B) Tables</a>                    
+                        and Biomarkers (ASCT+B) Tables</a>
                     <a class="dropdown-item" href="ccf-3d-reference-library.html">CCF 3D Reference Object Library</a>
+                    <a class="dropdown-item" href="ccf-2d-reference-library.html">CCF 2D Reference Functional Tissue Unit (FTU) Library</a>
+                    <a class="dropdown-item" href="omap.html">Organ Mapping Antibody Panels (OMAPs)</a>
                     <a class="dropdown-item" href="ccf-ontology.html">CCF Ontology</a>
+                    <a class="dropdown-item" href="ccf-gallery.html">CCF Organ VR Gallery</a>
                     <div class="pl-4 pt-3 font-weight-bold">Links</div>
                     <a class="dropdown-item" href="https://hubmapconsortium.github.io/ccf-asct-reporter/" title="Opens external website" target="_blank">ASCT+B Reporter</a>
                     <a class="dropdown-item" href="https://hubmap-ccf-ui.netlify.app/rui/" title="Opens external website" target="_blank">CCF Registration User Interface (RUI)</a>
                     <a class="dropdown-item" href="https://portal.hubmapconsortium.org/ccf-eui" title="Opens external website" target="_blank">CCF Exploration User Interface (EUI)</a>
                     <a class="dropdown-item" href="https://expand.iu.edu/browse/sice/cns/courses/hubmap-visible-human-mooc" title="Opens external website" target="_blank">Visible Human MOOC</a>
                     <a class="dropdown-item" href="https://portal.hubmapconsortium.org/" title="Opens external website" target="_blank">HuBMAP Data Portal</a>
-                    <a class="dropdown-item" href="kaggle.html" title="Opens external website" target="_blank">Kaggle Competition and Awards</a>
+                    <a class="dropdown-item" href="kaggle.html" title="Opens external website" target="_blank">Kaggle #1: HuBMAP - Hacking the Kidney</a>
+                    <a class="dropdown-item" href="kaggle2.html" title="Opens external website">Kaggle #2: HuBMAP + HPA - Hacking the Human Body</a>
                 </div>
             </div>
         </div>
@@ -59,48 +75,62 @@
         <main class="col-12 px-sm-3 py-sm-3 px-md-4 py-md-4 px-xl-5 py-xl-5 bd-content mt-4" role="main">
             <div class="px-md-5 py-md-5">
 
-                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="back mb-4">
+                            <a href="../index.html" title="Back link to CCF Portal Home Page"><span class="btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z" /></svg>
+                                    Home</span></a>
+                        </div>
+                        <h1 class="row">
+                            <div class="col-xs-12 col-sm-2 text-center">
+                                <div class="h-box bg-indigo px-lg-3 py-lg-3 mb-3 mb-sm-0">
+                                    <svg id="ico-asct" data-name="ico-asct" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 70 70">
+                                        <defs>
+                                            <style>
+                                                .cls-1{fill:#fff;}
+                                                .cls-1,.cls-2,.cls-3{stroke:#fff;}
+                                                .cls-1,.cls-2{stroke-miterlimit:10;}
+                                                .cls-2,.cls-3{fill:none;}
+                                                .cls-2{stroke-width:2px;}
+                                                .cls-3{stroke-linejoin:round;stroke-width:4px;}
+                                                .fill-indigo{fill:#4B0082;}
+                                            </style>
+                                        </defs>
+                                        <rect class="fill-indigo" width="70" height="70" />
+                                        <g id="OMAP_icon" data-name="OMAP icon"><polygon class="cls-1" points="19.84 58.26 19.84 49.55 20.34 49.13 20.34 58.26 19.84 58.26"/><polygon class="cls-1" points="20.34 36.84 19.84 37.26 19.84 24.23 20.34 24.23 20.34 36.84"/><polygon class="cls-1" points="48.82 59.35 48.32 59.35 48.37 50.08 48.87 50.58 48.82 59.35"/><polygon class="cls-1" points="48.87 38.03 48.37 37.63 48.49 24.23 48.99 24.24 48.87 38.03"/><polyline class="cls-2" points="32.32 27.81 33.74 28.24 35 27.91"/><polyline class="cls-2" points="38 27.13 39.77 26.67 48.74 24.23 59.42 28.25 63.05 63.41 48.57 59.35 33.75 63.41 20.12 58.26 5.48 63.41 9.27 28.25 20.12 24.23 27.6 26.39 29.5 26.96"/><polyline class="cls-3" points="51.49 50.88 36.36 37.42 36.36 8.6"/><polyline class="cls-3" points="15.79 50.88 30.91 37.42 30.91 8.6"/><line class="cls-3" x1="55.14" y1="45.59" x2="40.72" y2="33.3"/><line class="cls-3" x1="12.16" y1="45.59" x2="26.57" y2="33.3"/></g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span class="col-sm-10">Frequently Asked Questions (FAQs) for OMAPs</span>
+                        </h1>
+                        <wc-markdown src="omap-extras/omap-faq.md" class="row-md row"></wc-markdown>
+                    </div>
+                </div>
             </div>
 
         </main>
 
         <footer class="footer text-center"><a href="mailto:infoccf@indiana.edu" title="Email the MC-IU Team"><svg
-                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="ico-email align-top">
+                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="ico-email">
                     <path class="fill-none" d="M0 0h24v24H0z" />
                     <path class="fill-blue"
                         d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg> MC-IU (infoccf@indiana.edu)</a></footer>
+                    </svg> MC-IU (infoccf@indiana.edu)</a></footer>
 
-                <small class="mt-3 mb-3 d-block">©
-                    <script>new Date().getFullYear() > 2010 && document.write(new Date().getFullYear());</script> All Rights
-                    Reserved.</small>
+                    <small class="mt-3 mb-3 d-block">©
+                        <script>new Date().getFullYear() > 2010 && document.write(new Date().getFullYear());</script> All Rights
+                        Reserved.</small>
     </div>
-
-    <!-- START: Modal -->
-    <div class="modal fade bd-ccf-ongology-modal-lg my-3" tabindex="-1" role="dialog"
-        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="../img/img-ccf-ontology-flowchart-lg.png" alt="CCF Ontology flowchart"
-                        class="img-fluid my-2 mx-2" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- END: Modal -->
 
     <script src="../js/jquery-3.2.1.slim.min.js"></script>
     <script src="../js/popper.js"></script>
     <script src="../js/bootstrap-material-design.min.js"></script>
-
+    <script>
+        window.location.href = 'https://humanatlas.io/faq/omap';
+    </script>
 </body>
 
 </html>

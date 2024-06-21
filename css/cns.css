@@ -1,8 +1,12 @@
+html {
+    scroll-padding-top: 4.25rem;
+}
 body * {
     font-family: 'Inter', sans-serif;
 }
 
 /* page navbar */
+
 .bd-navbar {
     background-color: rgba(68, 76, 101, 1);
     position: sticky;
@@ -11,22 +15,22 @@ body * {
     z-index: 1071;
 }
 
-.bd-navbar #choose_table_version #choose_table_version-toggle {
+.bd-navbar .dropdown .dropdown-toggle {
     color: #bdbdbd;
 }
 
-.bd-navbar #choose_table_version #choose_table_version-toggle:hover {
+.bd-navbar .dropdown .dropdown-toggle:hover {
     color: white;
     cursor: pointer;
 }
 
-.bd-navbar #choose_table_version-menu {
+.bd-navbar .dropdown-menu {
     min-width: 17.5rem;
     margin-top: 12px;
     padding-bottom: 0;
 }
 
-.bd-navbar #choose_table_version-item {
+.bd-navbar .dropdown-item {
     white-space: normal;
     line-height: 1.5rem;
     border-bottom: 1px solid #e0e0e0;
@@ -47,7 +51,28 @@ svg.logo-body-color {
     margin-bottom: 1rem;
 }
 
+/* ASCT+B Table Chooser */
 
+#choose_table_version-toggle {
+    color: #bdbdbd;
+}
+
+#choose_table_version-toggle:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#choose_table_version-menu {
+    min-width: 17.5rem;
+    margin-top: 12px;
+    padding-bottom: 0;
+}
+
+#choose_table_version-item {
+    white-space: normal;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
 
 /* general */
 
@@ -62,7 +87,9 @@ main {
     cursor: pointer;
 }
 
-
+.row-md h2 {
+    margin-top: 3rem !important;
+}
 
 /* cards */
 
@@ -88,6 +115,11 @@ a:hover .card {
 .h-cards a:hover {
     text-decoration: none !important;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-dark-yellow {
+    color: rgba(241, 212, 47, 1);
+    border: 1px solid rgba(241, 212, 47, 1) !important;
 }
 
 .card-dark-orange {
@@ -130,7 +162,15 @@ a:hover .card {
     border: 1px solid rgba(32,190,255,1) !important;
 }
 
+.card-indigo {
+    color: #4B0082 !important;
+    border: 1px solid #4B0082 !important;
+}
 
+.card-burnt-orange {
+    color: rgba(211, 84, 0, 1) !important;
+    border: 1px solid rgba(211, 84, 0, 1) !important;
+}
 
 .h-card .card-title {
     font-size: 1rem;
@@ -302,12 +342,28 @@ a:hover .card {
     fill: rgba(255, 255, 255, 1);
 }
 
+.fill-burnt-orange {
+    fill: rgba(211, 84, 0, 1) !important;
+}
+
+.bg-burnt-orange {
+    background-color: rgba(211, 84, 0, 1);
+}
+
 .bg-dark-gray {
     background-color: rgba(0,0,0,0.13);
 }
 
 .bg-lighter-gray {
     background-color: rgba(0,0,0,0.04);
+}
+
+.bg-indigo {
+    background-color: #4B0082;
+}
+
+.bg-teal {
+    background-color: #449ea4;
 }
 
 /* .fill-secondary {
@@ -318,6 +374,11 @@ a:hover .card {
     color: rgba(255, 255, 255, 1);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+}
+
+.organ-navbar .nav-link {
+    text-align: center;
+    text-transform: none;
 }
 
 .fill-blue {
@@ -519,7 +580,11 @@ td {
     max-width: 6.5rem;
 }
 
-
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
@@ -564,5 +629,19 @@ z-index: 1;
 	transition: 200ms;
 }
 
-
 #v1_0_table { display : none }
+
+.alert-lightish {
+    color: black;
+    background-color: #fefefe;
+    border-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-bottom-width: 2px;
+    font-size: 14px;
+}
+.alert-light hr {
+    border-top-color: #ececf6;
+}
+.alert-light .alert-link {
+    color: #2196f3;
+}
